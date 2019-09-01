@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome!
+  </h1>
+
+
+
+<div style="width: 1000px; height: 800px;" *ngIf='signalRService.data'>
+  <canvas baseChart
+          [datasets]="signalRService.data"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          [chartType]="chartType"
+          [colors]="colors"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+<br><br>
+<ul>
+  <li *ngFor='let data of signalRService.bradcastedData'>
+    <strong>Label: </strong> {{data.label}} - <strong>Value: </strong> {{data.data[0]}}
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
