@@ -1,2 +1,3 @@
 # SignalRGraphics
- SignalR ile basit bir realtime grafik animasyon uygulaması
+Back-End: .Net Core platformu üzerinde, C# ve SignalR teknolojisi <br/>
+Front-End: Angular 7, Chart.js
